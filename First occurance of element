@@ -1,0 +1,20 @@
+int firstOccurance(vector<int>v,int target){
+    int start=0;
+    int end=v.size()-1;
+    int mid=s+(e-s)/2;
+    int ans=-1;
+while(start<=end){
+    if(v[mid]==target){
+        ans=mid;//store answer
+        end=mid-1;//Search in left
+    }
+    else if(t<v[mid])
+    end=mid-1;//Search in left
+
+    else
+    start=mid+1;//Search in right
+
+    mid=start+(end-start)/2;
+}
+return ans;
+}

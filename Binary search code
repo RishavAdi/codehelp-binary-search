@@ -1,0 +1,18 @@
+int binarySEarch(int arr[n],int size,int target){
+    int start=0;
+    int end=size-1;
+    int mid=start+(end-start)/2;
+    while(start<=end){
+        //return mid element if found
+        if(arr[mid]==target)
+        return mid;
+        //Search in right part
+        else if(target>arr[mid])
+        start=mid+1;
+        //Search in left part
+        else
+        end=mid-1;
+        mid=start+(end-start)/2;
+    }
+    return -1;//If element not found
+}
